@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
+
+// Import firebase hooks
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+
+// Import containers for Auth/Unauth
+import { LandingPageContainer, Dashboard } from './Containers';
+// 
+
+// const firestore = firebase.firestore();
 
 function App() {
+  const auth = firebase.auth();
+  const [user] = useAuthState(auth)
+  const firestore = firebase.firestore();
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {user ? <Dashboard /> : <LandingPageContainer /> }
     </div>
   );
 }

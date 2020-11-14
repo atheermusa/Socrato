@@ -1,0 +1,14 @@
+.registration-page-container {
+    display:flex;
+    justify-content: center;
+    padding-top: 30vh;
+    width: 100%;
+    height: 60vh;
+}
+
+.registration-form-container {
+    height: 20vh;
+    padding: 3rem;
+    border-radius: 0.3rem;
+    background-color: wheat;
+}
