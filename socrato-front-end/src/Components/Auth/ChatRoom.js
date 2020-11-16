@@ -38,7 +38,6 @@ export default function ChatRoom() {
 
     return (
         <>
-        <p>test</p>
             <main>
             {messages && messages.map(msg => <ChatMessage key ={msg.id} message={msg} />)} 
             </main>

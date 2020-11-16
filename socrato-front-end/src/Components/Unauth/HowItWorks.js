@@ -24,7 +24,7 @@ export default function HowItWorks() {
             <div className="how-it-works-description">
                 A short summary of how socrato will work
             </div>
-            <div  onClick= {signInWithGoogle} className = "how-it-works-register"> click here to register </div>
+            <div  onClick= {signInWithGoogle} className = "how-it-works-register"> click here to sign in with Google </div>
         </div>
     )
 }
