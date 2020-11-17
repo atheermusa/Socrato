@@ -1,9 +1,11 @@
 .chat-room-container {
     width: 75vw;
     background-color:rgba(0,0,0,0.4);
-    position: absolute;
-    right: 5vw;
-    top: 30vh;
+    position: relative;
+    top: 4vh;
+    left: 15vw
+    /* right: 5vw;
+    top: 30vh; */
 }
 
 
