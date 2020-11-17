@@ -5,6 +5,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 import "./Style/App.css"
+import background from './static/background.jpeg'
 
 // Import firebase hooks
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <img className="background-img" src="https://images.unsplash.com/photo-1458501534264-7d326fa0ca04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" />
+      <img className="background-img" src={background} />
       {user ? <Dashboard /> : <LandingPageContainer /> }
     </div>
   );
