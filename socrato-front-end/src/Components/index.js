@@ -7,3 +7,4 @@ export { default as SignIn } from "./Unauth/SignIn";
 
 export { default as ChatRoom } from "./Auth/ChatRoom";
 export { default as SignOut } from "./Auth/SignOut";
+export { default as NavBarAuth } from "./Auth/NavBarAuth.js";

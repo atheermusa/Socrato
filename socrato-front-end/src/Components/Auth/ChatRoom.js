@@ -1,5 +1,6 @@
 import React, {useRef, useState} from 'react'
 import ChatMessage from './ChatMessage'
+import "../../Style/ChatRoom.css"
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
@@ -37,8 +38,8 @@ export default function ChatRoom() {
 }
 
     return (
-        <>
-            <main>
+        <div className = "chat-room-container">
+            <main className = "chat-room-messages">
             {messages && messages.map(msg => <ChatMessage key ={msg.id} message={msg} />)} 
             </main>
 
@@ -49,6 +50,6 @@ export default function ChatRoom() {
             <button type="submit" disabled={!formValue}>Send</button>
 
             </form>
-        </>
+        </div>
     );
 }

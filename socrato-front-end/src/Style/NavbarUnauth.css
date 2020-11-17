@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-around;
     height: 5vh;
-    background-color: white;
+    padding-top: 1vh;
 }
 
 .unauth-navbar-links-container {
@@ -16,4 +16,13 @@
 
 .unauth-navbar-link {
     text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-logo img {
+    padding-top: 1vh;
+    width: 3vh;
+    height: 3vh;
+    min-height: 40px;
+    min-width: 40px;
 }

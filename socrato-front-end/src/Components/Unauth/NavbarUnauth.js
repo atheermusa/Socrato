@@ -17,7 +17,7 @@ export default function NavbarUnauth() {
 
     return (
         <div className = "unauth-navbar-container">
-            <Link to = "/" className= "navbar-logo"> Socrato</Link>
+            <Link to = "/" className= "navbar-logo"> <img className = "navbar-logo-img"alt="logo" src="https://www.pinclipart.com/picdir/big/369-3696201_chat-group-conversation-svg-png-icon-free-.png" /></Link>
             <div className = "unauth-navbar-links-container">
                 <Link to = "/" className = "unauth-navbar-link">
                     Home

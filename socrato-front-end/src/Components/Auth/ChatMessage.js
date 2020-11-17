@@ -15,7 +15,7 @@ export default function ChatMessage(props) {
     return (
         <div>
             <div className={`message ${messageClass}`}>
-                <img src={photoURL} />
+                <img className = "profile-picture" alt="users profile" src={photoURL} />
                 <p>{text}</p>
             </div>
         </div>
