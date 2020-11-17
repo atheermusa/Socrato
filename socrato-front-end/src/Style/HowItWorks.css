@@ -8,6 +8,8 @@
 
 .how-it-works-title {
     grid-row: 1;
+    color: white;
+    font-weight: 600;
     align-self: flex-end;
     padding-left: 5vw;
     text-align: start;
@@ -15,12 +17,21 @@
 }
 
 .how-it-works-description{
+    color: white;
     grid-row: 2;
     grid-column: 1;
+    margin-left: 4.5vw;
+    margin-top: 5vh;
+    padding-top: 1vh;
     text-align: start;
-    padding-left: 5vw;
-    align-self: center;
-    font-size: xx-large;
+    align-self: flex-end;
+    font-size: large;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 2rem;
+}
+
+.description-text {
+    color: white;
 }
 
 .how-it-works-register{
@@ -32,10 +43,15 @@
     grid-column: 1;
     align-self: center;
     text-decoration: none;
-    border-radius: 0.5rem;
-    background-color: green;
+    border-radius: 5rem;
+    border-style: solid;
+    border-color: white;
+    background-color: #c4c4c4cb;
+    color: white;
+    font-size: xx-large;
     color: white;
     font-size: xx-large;
     cursor: pointer;
+    box-shadow: 8px 9px 25px -1px rgba(0,0,0,0.75);
 
 }

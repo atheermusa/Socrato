@@ -1,11 +1,11 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import "../Style/Dashboard.css"
 import { ChatRoom, NavBarAuth } from '../Components'
 
 let lastUpdated = 15
 
 // let todaysCategory ;
-let todaysTopic = "todays topic!";
+// let todaysTopic = "todays topic!";
 
 let todaysDate = new Date();
 
@@ -54,8 +54,11 @@ export default function Dashboard() {
     return (
         <div>
             <NavBarAuth />
-            <h1>Hello, welcome to Socrato</h1>
-            <h2>Today's topic:{conversationStarters[lastUpdated].starter}</h2>
+            <h1 className="dashboard-greeting">Hello, welcome to Socrato</h1>
+            <div className = "dashboard-todays-topic-container">
+            <h2 className="dasboard-todays-topic-title">Today's topic</h2>
+            <h2 className="dasboard-todays-topic-question">{conversationStarters[lastUpdated].starter}</h2>
+            </div>
             <ChatRoom />
         </div>
     )

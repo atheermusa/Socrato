@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React, {useState} from 'react'
 import ChatMessage from './ChatMessage'
 import "../../Style/ChatRoom.css"
 
@@ -8,8 +8,6 @@ import 'firebase/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 export default function ChatRoom() {
-
-    // const dummy = useRef();
 
 
     const firestore = firebase.firestore();
@@ -34,7 +32,6 @@ export default function ChatRoom() {
     })
 
     setFormValue('');
-    // dummy.current.scrollIntoView({ behavior: 'smooth' });
 }
 
     return (
@@ -43,13 +40,15 @@ export default function ChatRoom() {
             {messages && messages.map(msg => <ChatMessage key ={msg.id} message={msg} />)} 
             </main>
 
+            < div className="chat-room-new-message-container">
             <form onSubmit={sendMessage}>
 
-            <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
+            <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="type something here..." />
 
             <button type="submit" disabled={!formValue}>Send</button>
 
             </form>
+            </ div>
         </div>
     );
 }
