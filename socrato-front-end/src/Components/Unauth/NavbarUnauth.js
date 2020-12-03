@@ -1,19 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "../../Style/NavbarUnauth.css"
-
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
+import { SignInWithGoogle } from '../index'
 
 export default function NavbarUnauth() {
 
-    const auth = firebase.auth();
-    const firestore = firebase.firestore();
-    const signInWithGoogle = () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider);
-    }
 
     return (
         <div className = "unauth-navbar-container">
@@ -25,9 +16,7 @@ export default function NavbarUnauth() {
                 <Link to = "/HowItWorks" className = "unauth-navbar-link">
                     How it Works
                 </Link>
-                <div onClick= {signInWithGoogle} className = "unauth-navbar-link">
-                    Login
-                </div>
+                <SignInWithGoogle class = "unauth-navbar-link" text = "Login" />
             </div>
         </div>
     )

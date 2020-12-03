@@ -1,20 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import "../../Style/HowItWorks.css"
 
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
-
+import { SignInWithGoogle } from '../index'
 
 export default function HowItWorks() {
-
-    const auth = firebase.auth();
-    const firestore = firebase.firestore();
-    const signInWithGoogle = () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider);
-    }
 
     return (
         <div className="how-it-works-container">
@@ -26,7 +15,8 @@ export default function HowItWorks() {
                 <p className = "description-text">At Socrato we believe everyone has the right to engaging, interesting and insightful conversations. Upon logging in, you'll be greeted with "Todays topic", an interesting conversation starter with a chat room where you can share your opinions with other users from anywhere in the world. </p>
                 <p className = "description-text">Topics range from funny conversation starters to deep philosophical questions and the room and the topic reset every day, ensuring you'll always have a new conversation with fresh perspectives</p>             
             </div>
-            <div  onClick= {signInWithGoogle} className = "how-it-works-register"> Sign in with Google </div>
+            <SignInWithGoogle text="Sign in with Google" class = "how-it-works-register"></SignInWithGoogle>
+            {/* <div  onClick= {signInWithGoogle} className = "how-it-works-register"> Sign in with Google </div> */}
         </div>
     )
 }

@@ -4,9 +4,6 @@ import { ChatRoom, NavBarAuth } from '../Components'
 
 let lastUpdated = 17
 
-// let todaysCategory ;
-// let todaysTopic = "todays topic!";
-
 let todaysDate = new Date();
 
 todaysDate = todaysDate.getDate()
