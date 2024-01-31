@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <img className="background-img" src="http://res.cloudinary.com/dl4pcxjxz/image/upload/v1605626298/photo-1458501534264-7d326fa0ca04_ob3xsc.jpg" alt="peaceful-background"/>
+      <img className="background-img" src="/background.jpg" alt="peaceful-background"/>
       {user ? <Dashboard /> : <LandingPageContainer /> }
     </div>
   );
